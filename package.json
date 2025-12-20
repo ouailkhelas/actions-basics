@@ -1,0 +1,12 @@
+{
+  "name": "matrix-testing-demo",
+  "version": "1.0.0",
+  "description": "Demo for matrix testing",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
