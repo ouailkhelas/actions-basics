@@ -1,10 +1,11 @@
 {
   "name": "matrix-testing-demo",
   "version": "1.0.0",
-  "description": "Demo for matrix testing",
+  "description": "Demo for caching and artifacts",
   "main": "calculator.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "mkdir -p dist && cp calculator.js dist/ && echo 'Build completed!'"
   },
   "devDependencies": {
     "jest": "^29.7.0"
