@@ -1,0 +1,43 @@
+name: Manual Deploy
+
+on:
+  workflow_dispatch:    # ← Déclenchement MANUEL uniquement
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: true
+        type: choice
+        options:
+        - development
+        - staging
+        - production
+      version:
+        description: 'Version number'
+        required: true
+        default: '1.0.0'
+      message:
+        description: 'Deployment message'
+        required: false
+        default: 'Manual deployment'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show deployment info
+      run: |
+        echo "🚀 Deploying to: ${{ inputs.environment }}"
+        echo "📦 Version: ${{ inputs.version }}"
+        echo "💬 Message: ${{ inputs.message }}"
+        echo "👤 Triggered by: ${{ github.actor }}"
+        echo "📅 Time: $(date)"
+    
+    - name: Simulate deployment
+      run: |
+        echo "Installing dependencies..."
+        sleep 2
+        echo "Building application..."
+        sleep 2
+        echo "Deploying to ${{ inputs.environment }}..."
+        sleep 2
+        echo "✅ Deployment completed!"
