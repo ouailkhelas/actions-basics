@@ -31,4 +31,4 @@ jobs:
         path: downloaded-dist/
     
     - name: List files
-      run: ls -la downloaded-dist/
+      run: ls -la downloaded-dist/   

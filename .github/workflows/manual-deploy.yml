@@ -1,7 +1,7 @@
 name: Manual Deploy
 
 on:
-  workflow_dispatch:    # ← Déclenchement MANUEL uniquement
+  workflow_dispatch:   
     inputs:
       environment:
         description: 'Environment to deploy'

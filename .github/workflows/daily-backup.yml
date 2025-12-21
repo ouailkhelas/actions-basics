@@ -1,0 +1,21 @@
+name: Daily Backup
+
+on:
+  schedule:
+    - cron: '0 2 1 1 *' 
+  workflow_dispatch:     
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show date
+      run: |
+        echo "Backup running at: $(date)"
+        echo "Day: $(date +%A)"
+        echo "Time: $(date +%H:%M:%S)"
+    
+    - name: Simulate backup
+      run: |
+        echo "Creating backup..."
+        echo "Backup completed!"
